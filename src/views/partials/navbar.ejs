@@ -1,0 +1,31 @@
+<link href="/static/css/navbar.css" rel="stylesheet">
+
+<nav id="navbar-setting" class="navbar border-bottom navbar-expand-lg py-3.5 bg-body-tertiary bg-dark">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="#">
+        <img src="/static/images/logodone.png" alt="Bootstrap" width="60" height="60">
+        TUT-LERS
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <% for(i of detailss.links){ %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href= "<%= i.url %>">
+                
+               <%= i.label %>
+
+            </a>
+          </li>
+           
+          <% } %>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
